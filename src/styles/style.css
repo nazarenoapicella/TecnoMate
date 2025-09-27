@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(200deg, #52b788 10%, #1b4332 50%, #52b788 100%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    padding: 15px;
+}
+
+
+
+ul{
+    display: flex;
+    gap: 100px;
+    list-style-type: none;
+}
+li{
+    color: white;
+    text-decoration: solid;
+    font-size:15px;
+    transition: transform 0.2s ease;
+}
+li:hover{
+    transform: scale(1.1);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-fondo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: brightness(0.7) contrast(1.1);
+}
+
+
+#fotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21%;       
+    height: 500px;     
+    overflow: hidden;  
+}
+
+#fotos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#description, #especifics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 20%; 
+    height: 500px;
+    overflow: auto; 
+    background-color: rgba(41, 100, 72, 0.4); 
+    color: white;
+    padding: 10px;
+    justify-content: space-between;
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+#description p {
+    width: 100%; 
+    word-wrap: break-word; 
+    white-space: normal; 
+    margin: 0; 
+    font-weight: bold;
+    font-size: 19px;
+}
+
+
+#especifics p {
+    width: 100%; 
+    word-wrap: break-word; 
+    white-space: normal; 
+    margin: 0; 
+
+}
+#especifics h1 {
+    font-size: 30px;
+    color: #ffffff; 
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    margin: 10%;    
+}
+
+
+.cuotas {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+.btn-comprar {
+    margin-top: 20px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, #52b788, #357758);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background: linear-gradient(90deg, #357758, #52b788);
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.mensaje-urgencia {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff4d4d;
+    animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+.precio {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.precio-con-descuento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 8px 0;
+    position: relative;
+}
+
+.precio-nuevo {
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+
+.descuento {
+    color: #00ff88;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+.precio-viejo {
+    color: red;
+    text-decoration: line-through;
+    font-size: 14px;
+    margin-top: -4px;
+    display: block;
+    opacity: 0.8;
+}
+
+#usuario {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+#general{
+    top: 3px;
+    width: 50px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    right: 100px;
+}
+
+#abrir-login {
+    background-color: #1b4332;
+    width: 230px;
+    height: auto; 
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    top: 60px;   
+    right: 0;
+    z-index: 100; 
+    overflow: visible; 
+}
+
+#abrir-login a {
+    color: #00ff88;
+    text-decoration: underline;
+}
+
+
+#texto{
+    width: auto;
+    margin: 10px;
+    gap: 10px;
+}
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+
+    #fotos, #description, #especifics {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #fotos img {
+        height: auto;
+    }
+
+    #especifics h1 {
+        font-size: 24px;
+        margin: 5% 0;
+    }
+
+    ul {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+}
+
+
+#description, #fotos, #especifics {
+    position: relative; 
+    z-index: 1;
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+        #description, #especifics {
+            width: 100%;
+            height: auto; 
+            padding: 15px;
+        }
+    
+        #fotos {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    
+        #fotos img {
+            width: 100%;
+            height: auto;
+        }
+    
+
+    #especifics h1 {
+        font-size: 40px;
+    }
+
+    .btn-comprar {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .precio-nuevo {
+        font-size: 28px;
+    }
+
+    .descuento {
+        font-size: 16px;
+    }
+
+    .precio-viejo {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+

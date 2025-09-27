@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - TecnoMate Inteligente</title>
+  <link rel="stylesheet" href="/styles/styleFeedback.css">
+  <link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Ctext y="0.9em" font-size="90"%3E🧉%3C/text%3E%3C/svg%3E'>
+</head>
+<body>
+  <nav>
+    <ul>
+      <a href="index.html"><li><strong>Inicio</strong></li></a>
+      <a href="especificaciones.html"><li><strong>Especificaciones</strong></li></a>
+      <a href="consultas.html"><li><strong>Preguntas frecuentes</strong></li></a>
+      <a href="feedback.html"><li style="text-decoration: underline;"><strong>Dar feedback</strong></li></a>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="feedback-container">
+      <h1>Tu opinión es importante</h1>
+      <p>Ayúdanos a mejorar el <strong>TecnoMate Inteligente</strong> dejando tu comentario.</p>
+
+      <form id="form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" placeholder="ejemplo@email.com" required>
+
+        <label for="calificacion">Calificación:</label>
+        <select id="calificacion" required>
+          <option value="">Selecciona</option>
+          <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+          <option value="4">⭐⭐⭐⭐ Muy bueno</option>
+          <option value="3">⭐⭐⭐ Bueno</option>
+          <option value="2">⭐⭐ Regular</option>
+          <option value="1">⭐ Malo</option>
+        </select>
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" rows="5" placeholder="Escribe tu comentario positivo aqui..." required></textarea>
+
+        <button type="submit">Enviar Feedback</button>
+      </form>
+    </section>
+  </main>
+</body>
+<script src="/resources/js/mainFeedback.js"></script>
+</html>
