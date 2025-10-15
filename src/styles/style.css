@@ -69,15 +69,18 @@ main {
     align-items: center;
     width: 21%;       
     height: 500px;     
-    overflow: hidden;  
+    overflow: hidden;     
 }
 
 #fotos img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-}
-
+    object-fit: cover;
+    border-radius: 20px; 
+    transition: opacity 1s ease-in-out, transform 0.6s ease; 
+    filter: brightness(0.9) contrast(1.1) saturate(1.05) blur(0.3px);
+  }
+  
 #description, #especifics {
     display: flex;
     flex-direction: column;
@@ -334,7 +337,10 @@ main {
     }
 }
 
-
+#imagenActual {
+    transition: opacity 0.8s ease;
+  }
+  
 
 
 

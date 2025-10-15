@@ -22,9 +22,14 @@ let indice = 0;
 
 
 function mostrarImagenYtexto() {
-    imagenActual.src = fotos[indice].src;
-    parrafo.textContent = textos[indice].texto;
+    imagenActual.style.opacity = 0; 
+    setTimeout(() => {
+        imagenActual.src = fotos[indice].src;
+        parrafo.textContent = textos[indice].texto;
+        imagenActual.style.opacity = 1; 
+    }, 400);
 }
+
 
 window.onload = function () {
     mostrarImagenYtexto();
